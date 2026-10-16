@@ -1,0 +1,8 @@
+{
+  "name": "Budget Pro",
+  "description": "Local-first offline financial ledger, budget planner, and recurring bills tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #eef6f5;
+    --card: #ffffff;
+    --card-subtle: #f8fbfb;
+    --ink: #1d2b2a;
+    --muted: #6b7b7a;
+    --line: #e2ebea;
+    --primary: #4f9bb0;
+    --primary-hover: #3d869a;
+    --green: #2e9e5b;
+    --blue: #2f7f9e;
+    --gold: #b8862a;
+    --red: #c9534b;
+    --shadow: 0 4px 16px -2px rgba(29, 43, 42, 0.06);
+  }
+
+  [data-theme="dark"] {
+    --bg: #121818;
+    --card: #1a2222;
+    --card-subtle: #222c2c;
+    --ink: #ecfdf5;
+    --muted: #9ca3af;
+    --line: #2b3737;
+    --primary: #2dd4bf;
+    --primary-hover: #14b8a6;
+    --green: #34d399;
+    --blue: #38bdf8;
+    --gold: #fbbf24;
+    --red: #f87171;
+    --shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.35);
+  }
+
+  [data-theme="midnight"] {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-subtle: #28364d;
+    --ink: #f8fafc;
+    --muted: #94a3b8;
+    --line: #334155;
+    --primary: #06b6d4;
+    --primary-hover: #0891b2;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --gold: #eab308;
+    --red: #ef4444;
+    --shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.45);
+  }
+
+  [data-theme="emerald"] {
+    --bg: #ecfdf5;
+    --card: #ffffff;
+    --card-subtle: #f0fdf4;
+    --ink: #065f46;
+    --muted: #047857;
+    --line: #a7f3d0;
+    --primary: #10b981;
+    --primary-hover: #059669;
+    --green: #059669;
+    --blue: #0d9488;
+    --gold: #d97706;
+    --red: #dc2626;
+    --shadow: 0 4px 16px -2px rgba(5, 150, 105, 0.08);
+  }
+
+  [data-theme="sunset"] {
+    --bg: #fff7ed;
+    --card: #ffffff;
+    --card-subtle: #fffaf5;
+    --ink: #7c2d12;
+    --muted: #9a3412;
+    --line: #fed7aa;
+    --primary: #f97316;
+    --primary-hover: #ea580c;
+    --green: #16a34a;
+    --blue: #0284c7;
+    --gold: #d97706;
+    --red: #e11d48;
+    --shadow: 0 4px 16px -2px rgba(249, 115, 22, 0.08);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe area padding utilities for mobile edge-to-edge / notches */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
